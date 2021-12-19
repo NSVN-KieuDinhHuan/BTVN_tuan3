@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script>
+    let Array01=[1,12,3,14,5,6,17,8,9,10,3]
+    let so_find=prompt("nhập vào một số:")
+    let vitri=[]
+    let mutil_array=1
+    let count=0
+    for (i=0;i<Array01.length;i++) {
+        if (Array01[i]==so_find) {
+            vitri.push(i)
+            count++;
+        }
+        mutil_array=mutil_array*Array01[i]
+    }
+    if ( vitri!=-1) {
+        document.write("vi trí của " +so_find +" trong mảng là " + vitri)
+    }else {
+        document.write("không có " +so_find )
+    }
+    document.write("<br>")
+    document.write("tích các phần tử trong mảng là:" +mutil_array)
+    document.write("<br>")
+    document.write("số " + so_find + " xuất hiện " + count + " lần trong mảng" )
+
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2 mảng 2 chiều </title>
+</head>
+<body>
+<script>
+    let a = [
+        [1, 2, 1, 24],
+        [8, 11, 9, 4],
+        [7, 0, 7, 27],
+        [7, 4, 28, 14],
+        [3, 10, 26, 7]
+    ];
+    let sum_array=0
+    let sum_row
+    let sum_col
+    for (i=0;i<a.length;i++) {
+        sum_row=0
+        for(j=0;j<a[i].length;j++) {
+            sum_row+=a[i][j]
+            sum_array+=a[i][j];
+        }
+        document.write("Tông của row " +i + " là " +sum_row)
+        document.write("<br>")
+    }
+    document.write("Tông của mảng 2 chiều là " +sum_array)
+    document.write("<br>")
+    let max_col
+    for (j = 0; j < a[0].length; j++) {
+        sum_col=0
+        max_col=a[0][j]
+       for (i=0;i<a.length;i++) {
+          sum_col=sum_col+a[i][j]
+           if (a[i][j]>max_col) {
+               max_col=a[i][j]
+           }
+        }
+        document.write("Tông của col " +j + " là " +sum_col+ " ,phần tử lớn nhất là "+max_col)
+        document.write("<br>")
+    }
+</script>
+</body>
+</html>
